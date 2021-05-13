@@ -8,7 +8,6 @@
 
 - In Unix - the root directory is represented by `/`  
 - In Windows = `C:\`
-
 - Not every user will have access to the entire file system
 
 ### Paths  
