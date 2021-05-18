@@ -43,10 +43,10 @@ public class Dog {
 	 * 			- ** if you do provide one, the default constructor is 'lost'. 
 	 * */
 	// No-Args constructor - exactly what the compiler provides as a default constructor
-//	public Dog() {
-//		
-//	}
-//	
+	public Dog() {
+		
+	}
+	
 	public Dog(String name) {
 		this.name = name;
 	}

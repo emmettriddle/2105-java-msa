@@ -6,6 +6,10 @@ public class IfElse {
 	
 		int x = 100;
 		
+		x = 50; 
+		
+		System.out.println(x); 
+		
 //		if (x > 50 && x < 100) {
 //			System.out.println(x + " is between 50 and 100");
 //			
