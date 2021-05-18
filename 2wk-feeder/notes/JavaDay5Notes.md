@@ -11,7 +11,16 @@
 ### Inheritance
 > The ability for entities to adopt variables (fields) and/or methods (behaviors) from a parent (super) class.  
 > This allows for instantiating child objects from said parent class  
-> IS-A relationship.
+> IS-A relationship.  
+> We use the `extends` keyword
+
+- Essentially, Inheritance copies *visible* variables and methods from a parent class into a child class. 
+- It promotes code reusability, reduces duplication and redundancy. 
+- Enables polymorphism and code flexibility (more on this later)
+- Structures classes into an understandable hierarchy.
+
+> All classes in Java implicitly inherit from the Object Class. 
+> This means that all objects inherit the Object Class' attributes and behaviors - which we can override to provide a unique implementation. 
 
 ### Encapsulation  
 > The act of wrapping code into a single unit and then selectively exposing and restricting access to that code based on functionality or use within classes. 
