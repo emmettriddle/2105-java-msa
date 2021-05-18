@@ -50,7 +50,7 @@ public class StringPlayground {
 		String name = "Dan";
 		String str = String.format("Hello my name is %s", name);
 		
-		System.out.printf("Hello your name is not %s", name);
+		System.out.printf("Hello, %s, it's nice to meet you.", name);
 		
 		System.out.println(str);
 		

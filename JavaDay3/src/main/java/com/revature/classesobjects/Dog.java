@@ -80,9 +80,48 @@ public class Dog {
 	public String toString() {
 		return "Dog [name=" + this.name + ", breed=" + this.breed + ", age=" + this.age + ", isFed=" + this.isFed +"]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + age;
+		result = prime * result + ((breed == null) ? 0 : breed.hashCode());
+		result = prime * result + (isFed ? 1231 : 1237);
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Dog other = (Dog) obj;
+		if (age != other.age)
+			return false;
+		if (breed == null) {
+			if (other.breed != null)
+				return false;
+		} else if (!breed.equals(other.breed))
+			return false;
+		if (isFed != other.isFed)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
 	
 	// Notice that this class has no main() method - we don't need one, because we won't be executing this class
 
+	
+	
 }
 
 
