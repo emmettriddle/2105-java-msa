@@ -22,26 +22,88 @@ public class CarGarage {
 //		c.setColor("purple");
 //		
 //		System.out.println(c);
-		Car c = new Car();
+//		Car c = new Car();
+//		
+//		c.drive(); 
+//		
+//		Subaru cross = new Subaru("Crosstrek", 12, "blue");
+//		
+//		System.out.println(cross);
+//		
+//		cross.drive();
+//		
+//		cross.driveSomeDistance(3000);
+//		
+//		System.out.println(cross);
+//		
+//		Car newCar = new Subaru("another car", 1000, "silver");
+//		
+//		newCar.drive();
+//		newCar.drive(10);
+//		
+//
+//		System.out.println(newCar);
+//		
+//		Subaru castCar = (Subaru) newCar;
+//		
+//		castCar.driveSomeDistance(10);
+//		
+//		System.out.println(newCar);
+//		
+//		Car castCross = (Car) cross;
+//		
+//		crash(cross);
 		
-		c.drive(); 
 		
-		Subaru cross = new Subaru("Crosstrek", 12, "blue");
+		// Create a Person
+		Person dan = new Person("Dan", 100);
 		
-		System.out.println(cross);
+		Subaru s = new Subaru("Crosstrek", 6000, "red");
 		
-		cross.drive();
+		dan.setCar(s);
 		
-		cross.driveSomeDistance(3000);
+		System.out.println(dan);
 		
-		System.out.println(cross);
+		Car c = new Car("Honda", 750000, "silver");
 		
-		Car newCar = new Subaru("another car", 1000, "silver");
+		Person p = new Person("Dumbledore", 500, c);
 		
-		newCar.drive();
-		newCar.drive(10);
+		System.out.println(p);
+		
+		Person ron = new Person("Ron", 50, new Car("Ford", 540000, "blue"));
+		
+		System.out.println(ron);
+		
+//		Car car = ron.getCar();
+		
+		ron.getCar().drive(400);
+		
+		c.setColor("purple");
+		
+		ron.setCar(null);
+		
+		System.out.println(ron.getCar());
+//		ron.getCar().setMileage(1000);
+		
+		System.out.println(p);
+		
+//		System.out.println(p.hashCode());
+//		System.out.println(c.hashCode());
+//		System.out.println(ron.hashCode());
+//		System.out.println(ron.getCar().hashCode());
 
-		System.out.println(newCar);
+		p.getCar().setColor("pink");
+		System.out.println(c);
+		System.out.println(p);
+		
+		
+	}
+	
+	public static void crash(Car c) {
+		System.out.println("Crash!");
+	}
+	
+	public static void crashSubaru(Subaru s) {
 		
 	}
 
