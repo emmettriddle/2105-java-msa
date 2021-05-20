@@ -1,0 +1,13 @@
+Project B
+
+MVP: Minimum Viable Product
+
+- User can move from room to room throughout the house by providing instructions in the console.
+
+Stretch Goals:
+
+- Refactor and use Collections (Map, ArrayList, etc). 
+
+- Have items in the rooms that users can interact with. 
+
+- Anything exciting you want to add. Like zombies.
