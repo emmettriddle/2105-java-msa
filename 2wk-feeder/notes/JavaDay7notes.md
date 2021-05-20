@@ -18,10 +18,14 @@
 - Catch
 - Throw
 - Finally
-- Throws 
+- Throws
 
 ## Exception Hierarchy
 - see drawing 
 
 ## Collections Framework
 - a conglomeration of classes and interfaces which  are used for storing and sorting Objects in Java
+
+
+## Collection Hierarchy 
+- See Drawing

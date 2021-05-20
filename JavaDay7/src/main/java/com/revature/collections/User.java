@@ -51,7 +51,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User \n[username=" + username + ", \npassword=" + password + ", \nage=" + age + "]";
+		return "User [username=" + username + ", password=" + password + ", age=" + age + "]";
 	}
 	
 
