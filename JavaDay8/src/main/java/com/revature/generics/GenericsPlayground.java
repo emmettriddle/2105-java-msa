@@ -28,12 +28,22 @@ public class GenericsPlayground {
 		}
 		
 		
+		// The data type that we pass to this class will determine the
+		// data type of its members
 		
+		GenericClass<String> myGenericClass = new GenericClass<String>();
+		myGenericClass.setValue("some value");
+		System.out.println(myGenericClass.getValue());
 		
+		GenericClass<Integer> myGenClass = new GenericClass<Integer>();
+		myGenClass.setValue(100); // auto boxing
+		System.out.println(myGenClass.getValue());
+//		Double castInt = (Double.parseDouble(String.valueOf(myGenClass.getValue())));
 		
+		//double castInt = myGenClass.getValue();
+		//System.out.println(castInt);
 		
-		
-		
+		//GenericClass<User> userClass = new GenericClass<User>();
 		
 	}
 
