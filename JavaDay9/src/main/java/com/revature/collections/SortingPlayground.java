@@ -126,6 +126,9 @@ public class SortingPlayground {
 		umap.forEach((user, num) -> System.out.println(user + " => " + num));
 		
 		
+		//Collections col = new Collections();  // The COllections class' constructor is private
+		
+		
 	}
 	
 	
