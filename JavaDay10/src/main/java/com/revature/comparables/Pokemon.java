@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+// adding a random comment 
+
 public class Pokemon { //implements Comparable<Pokemon> {
 	
 	private String type;
