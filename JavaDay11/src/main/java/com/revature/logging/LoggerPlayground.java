@@ -16,7 +16,6 @@ public class LoggerPlayground {
 		logInfo("Info level");
 		
 		
-		
 	}
 	
 	public static void logInfo(String message) {
