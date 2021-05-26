@@ -6,9 +6,11 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.revature.testexample.MathOps;
+
 
 public class MathOpsTest {
 	
@@ -40,7 +42,7 @@ public class MathOpsTest {
 		assertNotEquals(111, MathOps.add(5, 5));
 		assertEquals(3, MathOps.add(6, -3));
 		
-		
+	
 		
 	}
 	
@@ -51,6 +53,7 @@ public class MathOpsTest {
 		
 	}
 	
+	@Ignore
 	@Test(expected = ArithmeticException.class)
 	public void divideTest() {
 		System.out.println("Running divide test");
