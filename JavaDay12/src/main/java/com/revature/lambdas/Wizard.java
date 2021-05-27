@@ -50,6 +50,7 @@ public class Wizard {
 		
 		merlin.proficiencies.forEach((m) -> m.castSpell());
 		
+		// Method Reference - A::B = method 'B' from class 'A'
 		merlin.proficiencies.forEach(Magic::castSpell);
 		
 	}
