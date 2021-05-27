@@ -35,6 +35,7 @@
 - `@AfterClass` - teardown method - runs once after all tests
 - `@Before` - runs before each test method
 - `@After`  - runs after each test method
+- `@Ignore` - doesn't run the test method
 
 > Annotations are special constructs in Java.  
 They provide metadata about the source code to the compiler and JVM.  
