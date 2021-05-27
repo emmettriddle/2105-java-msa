@@ -17,11 +17,19 @@ public class Driver {
 		for (Breed b : breeds) {
 			System.out.println(b);
 		}
-//		System.out.println("\n\n");
+		System.out.println("\n\n");
 //		
 //		for (Breed b : MockDB.breeds) {
 //			System.out.println(b);
 //		}
+		
+		//System.out.println(br.getById(1));
+		
+		Breed newBreed = new Breed("Jaguar");
+		br.add(newBreed);
+		System.out.println(br.getAll());
+		
+		
 	}
 
 }
