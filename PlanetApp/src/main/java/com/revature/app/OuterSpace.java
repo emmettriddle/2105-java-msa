@@ -52,7 +52,28 @@ public class OuterSpace {
 			e.printStackTrace();
 		}
 		
+		for (int i = 10; i <10; i --) {
+			System.out.println(i);
+		}
+		try {
+			test(1);
+			
+		} catch (StackOverflowError e) {
+			throw new OutOfMemoryError();
+		}
 		
+		System.out.println("After error");
+		
+		
+		
+	}
+	
+	public static void test(int i) {
+		if (i == 0) {
+			return;
+		} else {
+			test(i++);
+		}
 	}
 
 }
