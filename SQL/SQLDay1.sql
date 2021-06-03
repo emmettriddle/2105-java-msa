@@ -6,6 +6,7 @@
  * */
 
 drop table movies;
+
 -- Create a table (DDL)
 CREATE TABLE movies (
 	id serial,
