@@ -16,17 +16,15 @@ public class BreedDAO implements GenericRepository<Breed> {
 
 	@Override
 	public Breed add(Breed b) {
-		String sql = "insert into breeds values (default, ?);";
+		String sql = "insert into breeds values (default, ?) returning *;";
 		
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, b.getBreed());
 			
-			//ResultSet rs = ps.executeQuery();
-			
 			boolean success = ps.execute();
 			
-			if (!success) {
+			if (success) {
 				ResultSet rs = ps.getResultSet();
 				
 				if (rs.next()) {
@@ -42,33 +40,7 @@ public class BreedDAO implements GenericRepository<Breed> {
 		
 		return null;
 	}
-	
-//	@Override
-//	public Breed add(Breed b) {
-//		String sql = "insert into breeds values (default, ?);";
-//		
-//		try {
-//			PreparedStatement ps = conn.prepareStatement(sql);
-//			ps.setString(1, b.getBreed());
-//			
-//			boolean success = ps.execute();
-//			
-//			if (success) {
-//				ResultSet rs = ps.getResultSet();
-//				
-//				if (rs.next()) {
-//					b.setId(rs.getInt("id"));
-//					return b;
-//				}
-//			}
-//			
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		return null;
-//	}
-	
+
 
 	@Override
 	public Breed getById(Integer id) {
@@ -125,14 +97,49 @@ public class BreedDAO implements GenericRepository<Breed> {
 	}
 
 	@Override
-	public void update(Breed t) {
-		// TODO Auto-generated method stub
+	public boolean update(Breed b) {
+
+		String sql = "update breeds set id = ?, breed = ? where id = ?;";
+		
+		try {
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, Integer.toString(b.getId()));
+			ps.setString(2, b.getBreed());
+			
+			boolean success = ps.execute();
+			
+			if (success) {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return false;
+		
 		
 	}
 
 	@Override
-	public void delete(Breed t) {
-		// TODO Auto-generated method stub
+	public boolean delete(Breed b) {
+		String sql = "delete from breeds where id = ?;";
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, Integer.toString(b.getId()));
+			
+			boolean success = ps.execute();
+			
+			if (success) {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
 		
 	}
 

@@ -46,9 +46,7 @@ public class CatDAO implements GenericRepository<Cat> {
 				c.setBreed(b);
 				
 				return c;
-			
 			}
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -62,15 +60,16 @@ public class CatDAO implements GenericRepository<Cat> {
 	}
 
 	@Override
-	public void update(Cat t) {
+	public boolean update(Cat t) {
 		// TODO Auto-generated method stub
+		return false;
 		
 	}
 
 	@Override
-	public void delete(Cat t) {
+	public boolean delete(Cat t) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 }

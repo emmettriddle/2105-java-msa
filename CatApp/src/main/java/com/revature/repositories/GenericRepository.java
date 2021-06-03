@@ -17,8 +17,8 @@ public interface GenericRepository<T> {
 	public List<T> getAll();
 	
 	// UPDATE
-	public void update(T t);
+	public boolean update(T t);
 	
 	// DELETE
-	public void delete(T t);
+	public boolean delete(T t);
 }
