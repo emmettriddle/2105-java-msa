@@ -74,7 +74,7 @@ add constraint cats_breed_fk
 foreign key (breed) references breeds(id)
 on delete set null;
 
-drop table breeds;
+delete from breeds where id = 5;
 
 -- add some breeds to my breed table
 insert into breeds values
